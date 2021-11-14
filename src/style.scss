@@ -14,6 +14,7 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 1px 2px 1px rgb(236, 236, 236);
 
   &__logo {
     font-size: 18px;
@@ -39,8 +40,7 @@ html, body {
 }
 
 .main {
-  padding: 0 40px;
-  overflow-x: auto;
+  padding: 0 20px;
   overflow-y: hidden;
   height: calc(100vh - 70px);
 }
@@ -49,6 +49,7 @@ html, body {
   display: flex;
   margin-top: 20px;
   height: 100%;
+  overflow-x: auto;
 
   &__list {
     display: flex;
@@ -115,4 +116,60 @@ html, body {
     color: #8e919a;
     font-size: 14px;
   }
+}
+
+.add-task-panel {
+  display: flex;
+  margin-top: 20px;
+}
+
+.input-text {
+  width: 100vw;
+  margin-right: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgb(64, 72, 75);
+  padding: 10px 15px;
+  outline: navajowhite;
+  border-radius: 7px;
+  border: 1px solid rgb(226, 229, 231);
+}
+
+.btn {
+  outline: none;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.95;
+  }
+
+  &_fullwidth {
+    width: 100%;
+  }
+
+  &_active {
+    background-color: rgb(88, 117, 255);
+  }
+
+  &_gray {
+    color: #696c77;
+    background-color: #ebecf1;
+  }
+}
+
+.add-list-container {
+  min-width: 250px;
+  max-width: 250px;
+  margin-top: 35px;
 }

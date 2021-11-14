@@ -6,7 +6,8 @@
   "scripts": {
     "build-css": "node-sass -o src/css src",
     "build": "rm -rf build && mkdir -p build/css && npm run build-css && cp -R src/css build && cp src/*.html build",
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +15,8 @@
   "devDependencies": {
     "node-sass": "^6.0.1",
     "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "gh-pages": "^3.2.3"
   }
 }

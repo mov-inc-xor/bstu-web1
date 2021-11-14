@@ -17,24 +17,28 @@
     </div>
     <div class="header__user">
       <span>Илья Артёменко</span>
-      <a href="#auth"><i class="fas fa-sign-out-alt"></i></a>
+      <a href="signin.html"><i class="fas fa-sign-out-alt"></i></a>
     </div>
   </header>
   <main class="main">
     <div class="add-task-panel">
       <input type="text" placeholder="Что сделать?" class="input-text">
-      <button class="btn btn_active"><i class="fas fa-plus"></i></button>
+      <button class="btn btn_colored btn_active"><i class="fas fa-plus"></i></button>
     </div>
 
     <div class="desk">
       <div class="desk__list">
-        <header class="list__header list__header_blue">
-          Планируются
+        <header class="list__header">
+          <span class="header__title header__title_blue">Нераспределённые</span>
+          <div class="header__btn-container">
+            <button class="btn btn_inline-gray"><i class="fas fa-pen"></i></button>
+          </div>
         </header>
         <main class="list__main">
           <div class="list__card">
             <header class="card__header">
-              Задача 1
+              <span>Задача 1</span>
+              <button class="btn btn_inline-green"><i class="fas fa-check-circle"></i></button>
             </header>
             <main class="card__main">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid quisquam tempore nobis tempora asperiores necessitatibus. Id ratione debitis dolore, in aspernatur quas, saepe beatae impedit minus earum explicabo delectus quibusdam.
@@ -42,7 +46,8 @@
           </div>
           <div class="list__card">
             <header class="card__header">
-              Задача 2
+              <span>Задача 2</span>
+              <button class="btn btn_inline-green"><i class="fas fa-check-circle"></i></button>
             </header>
             <main class="card__main">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid quisquam tempore nobis tempora asperiores necessitatibus. Id ratione debitis dolore, in aspernatur quas, saepe beatae impedit minus earum explicabo delectus quibusdam.
@@ -52,13 +57,18 @@
       </div>
 
       <div class="desk__list">
-        <header class="list__header list__header_yellow">
-          Выполняются
+        <header class="list__header">
+          <span class="header__title header__title_yellow">Выполняются</span>
+          <div class="header__btn-container">
+            <button class="btn btn_inline-gray"><i class="fas fa-pen"></i></button>
+            <button class="btn btn_inline-red"><i class="fas fa-trash"></i></button>
+          </div>
         </header>
         <main class="list__main">
           <div class="list__card">
             <header class="card__header">
-              Задача 3
+              <span>Задача 3</span>
+              <button class="btn btn_inline-green"><i class="fas fa-check-circle"></i></button>
             </header>
             <main class="card__main">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid quisquam tempore nobis tempora asperiores necessitatibus. Id ratione debitis dolore, in aspernatur quas, saepe beatae impedit minus earum explicabo delectus quibusdam.
@@ -66,7 +76,8 @@
           </div>
           <div class="list__card">
             <header class="card__header">
-              Задача 4
+              <span>Задача 4</span>
+              <button class="btn btn_inline-green"><i class="fas fa-check-circle"></i></button>
             </header>
             <main class="card__main">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid quisquam tempore nobis tempora asperiores necessitatibus. Id ratione debitis dolore, in aspernatur quas, saepe beatae impedit minus earum explicabo delectus quibusdam.
@@ -74,7 +85,8 @@
           </div>
           <div class="list__card">
             <header class="card__header">
-              Задача 5
+              <span>Задача 5</span>
+              <button class="btn btn_inline-green"><i class="fas fa-check-circle"></i></button>
             </header>
             <main class="card__main">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid quisquam tempore nobis tempora asperiores necessitatibus. Id ratione debitis dolore, in aspernatur quas, saepe beatae impedit minus earum explicabo delectus quibusdam.
@@ -84,13 +96,18 @@
       </div>
 
       <div class="desk__list">
-        <header class="list__header list__header_green">
-          Тестируются
+        <header class="list__header">
+          <span class="header__title header__title_green">Тестируются</span>
+          <div class="header__btn-container">
+            <button class="btn btn_inline-gray"><i class="fas fa-pen"></i></button>
+            <button class="btn btn_inline-red"><i class="fas fa-trash"></i></button>
+          </div>
         </header>
         <main class="list__main">
           <div class="list__card">
             <header class="card__header">
-              Задача 6
+              <span>Задача 6</span>
+              <button class="btn btn_inline-green"><i class="fas fa-check-circle"></i></button>
             </header>
             <main class="card__main">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid quisquam tempore nobis tempora asperiores necessitatibus. Id ratione debitis dolore, in aspernatur quas, saepe beatae impedit minus earum explicabo delectus quibusdam.
@@ -98,7 +115,8 @@
           </div>
           <div class="list__card">
             <header class="card__header">
-              Задача 7
+              <span>Задача 7</span>
+              <button class="btn btn_inline-green"><i class="fas fa-check-circle"></i></button>
             </header>
             <main class="card__main">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid quisquam tempore nobis tempora asperiores necessitatibus. Id ratione debitis dolore, in aspernatur quas, saepe beatae impedit minus earum explicabo delectus quibusdam.
@@ -108,10 +126,8 @@
       </div>
 
       <div class="add-list-container">
-        <button class="btn btn_gray btn_fullwidth"><i class="fas fa-plus"></i> Новый список</button>
-      </div>
-      
-    
+        <button class="btn btn_colored btn_gray btn_fullwidth"><i class="fas fa-plus"></i> Новый список</button>
+      </div>    
   </main>
 
   <script src="https://kit.fontawesome.com/ef6b447954.js" crossorigin="anonymous"></script>

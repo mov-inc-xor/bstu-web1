@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="http://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
   <title>Канбан</title>
@@ -21,8 +21,12 @@
     </div>
   </header>
   <main class="main">
-    <div class="desk">
+    <div class="add-task-panel">
+      <input type="text" placeholder="Что сделать?" class="input-text">
+      <button class="btn btn_active"><i class="fas fa-plus"></i></button>
+    </div>
 
+    <div class="desk">
       <div class="desk__list">
         <header class="list__header list__header_blue">
           Планируются
@@ -102,6 +106,12 @@
           </div>
         </main>
       </div>
+
+      <div class="add-list-container">
+        <button class="btn btn_gray btn_fullwidth"><i class="fas fa-plus"></i> Новый список</button>
+      </div>
+      
+    
   </main>
 
   <script src="https://kit.fontawesome.com/ef6b447954.js" crossorigin="anonymous"></script>

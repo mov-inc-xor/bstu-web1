@@ -3,8 +3,86 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: whitesmoke; }
+  background-color: whitesmoke;
+  font-family: 'Montserrat', sans-serif; }
 
 .header {
   background-color: white;
-  height: 50px; }
+  padding: 0 40px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .header__logo {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 20px; }
+  .header__user {
+    display: flex;
+    align-items: center; }
+    .header__user span {
+      font-size: 14px;
+      font-weight: 500;
+      margin-right: 7px; }
+    .header__user i {
+      color: #c7cbd5;
+      font-size: 20px; }
+
+.main {
+  padding: 0 40px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  height: calc(100vh - 70px); }
+
+.desk {
+  display: flex;
+  margin-top: 20px;
+  height: 100%; }
+  .desk__list {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 300px;
+    margin-right: 30px;
+    height: 100%; }
+
+.list__header {
+  border-radius: 20px;
+  padding: 5px 10px;
+  color: #333d45;
+  font-weight: 600;
+  font-size: 13px;
+  width: fit-content;
+  margin-bottom: 10px; }
+  .list__header_blue {
+    background-color: #e5ebf5; }
+  .list__header_yellow {
+    background-color: #ffecaa; }
+  .list__header_green {
+    background-color: #caedd2; }
+
+.list__main {
+  overflow-y: auto;
+  height: 100%; }
+
+.list__card {
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0 2px 2px 1px #ededed;
+  padding: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border: 1px solid #e9eef2;
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none; }
+
+.card__header {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px; }
+
+.card__main {
+  color: #8e919a;
+  font-size: 14px; }

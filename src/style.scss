@@ -5,6 +5,16 @@ html, body {
   padding: 0;
   background-color: rgb(245, 245, 245);
   font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.mr20 {
+  margin-right: 20px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
 }
 
 .header {
@@ -63,6 +73,37 @@ html, body {
 
 .list {
   &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__main {
+    overflow-y: auto;
+    height: 100%;
+  }
+
+  &__card {
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 0 2px 2px 1px #ededed;
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 1px solid #e9eef2;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+
+    &:hover button {
+      visibility: visible;
+    }
+  }
+}
+
+.header {
+  &__title {
     border-radius: 20px;
     padding: 5px 10px;
     color: #333d45;
@@ -84,24 +125,13 @@ html, body {
     }
   }
 
-  &__main {
-    overflow-y: auto;
-    height: 100%;
+  &__btn-container {
+    display: flex;
+    visibility: hidden;
   }
 
-  &__card {
-    background-color: white;
-    border-radius: 7px;
-    box-shadow: 0 2px 2px 1px #ededed;
-    padding: 15px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    border: 1px solid #e9eef2;
-
-    user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    -moz-user-select: none;
+  .list__header:hover &__btn-container {
+    visibility: visible;
   }
 }
 
@@ -110,6 +140,10 @@ html, body {
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 10px;
+
+    & button {
+      visibility: hidden;
+    }
   }
 
   &__main {
@@ -124,7 +158,7 @@ html, body {
 }
 
 .input-text {
-  width: 100vw;
+  width: 100%;
   margin-right: 10px;
   font-size: 15px;
   font-weight: 500;
@@ -138,13 +172,10 @@ html, body {
 .btn {
   outline: none;
   border: none;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 7px;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
+  background-color: unset;
 
   &:hover {
     opacity: 0.8;
@@ -154,11 +185,30 @@ html, body {
     opacity: 0.95;
   }
 
+  &_inline-gray {
+    color: rgb(167, 181, 189);
+  }
+
+  &_inline-red {
+    color: rgb(250, 120, 120);
+  }
+
+  &_inline-green {
+    color: rgb(134, 209, 138);;
+  }
+
+  &_colored {
+    padding: 10px 15px;
+    border-radius: 7px;
+    transition: 0.3s;
+  }
+
   &_fullwidth {
     width: 100%;
   }
 
   &_active {
+    color: white;
     background-color: rgb(88, 117, 255);
   }
 
@@ -169,7 +219,28 @@ html, body {
 }
 
 .add-list-container {
-  min-width: 250px;
-  max-width: 250px;
+  min-width: 300px;
+  max-width: 300px;
   margin-top: 35px;
+}
+
+.center-container {
+  background-color: white;
+  margin: auto;
+  width: 300px;
+  padding: 20px 80px 30px 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__bottom-controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    & span {
+      font-size: 13px;
+    }
+  }
 }
